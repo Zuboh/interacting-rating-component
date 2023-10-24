@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --mainFont: "Overpass", sans-serif;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-family: var(--mainFont);
+  background-color: var(--veryDarkBlue);
+  height: 100vh;
+  color: var(--white);
+}
+
+button {
+  cursor: pointer;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #262f38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p,
+span:first-of-type {
+  align-self: flex-start;
+  margin: 0;
+}
+
+span {
+  cursor: pointer;
+}
+
+span:hover {
+  background-color: var(--orange);
+  transition: 0.3s ease;
+}
+
+.star:hover {
+  animation: spin 0.5s linear;
+  background-color: var(--darkBlue);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  padding: 2em 3em;
+  width: 415px;
+  height: 415px;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a212b;
+  border-radius: 30px;
+}
+
+p {
+  color: var(--mediumGrey);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  color: var(--white);
+  background-color: var(--orange);
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  transition: 0.5s ease;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.active,
+.active:hover {
+  background-color: var(--lightGrey);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
